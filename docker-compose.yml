@@ -8,3 +8,4 @@ services:
       - ./data:/data
     environment:
       - EULA=true
+    restart: "always"

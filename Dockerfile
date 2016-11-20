@@ -1,6 +1,6 @@
-FROM java:openjdk-7-jre
+FROM java:openjdk-8-jre
 
-ENV MC_VERSION=1.8.9
+ENV MC_VERSION=1.11
 
 RUN wget https://s3.amazonaws.com/Minecraft.Download/versions/$MC_VERSION/minecraft_server.$MC_VERSION.jar
 
@@ -9,7 +9,7 @@ RUN wget https://s3.amazonaws.com/Minecraft.Download/versions/$MC_VERSION/minecr
 #   && chown minecraft:minecraft /data
 
 WORKDIR /data
-VOLUME /data
+# VOLUME /data
 
 ENV JAVA_OPTS="-XX:MaxPermSize=100M -Xmx850M -Xms850M"
 ENV EULA=false
